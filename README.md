@@ -31,9 +31,11 @@ lorem ipsum dolor foo|
 ```
 
 The matcher also does some magic so the name of the alias is shown in the
-completion menu, but not inserted into the buffer. If the menu shows `mom: Jane Doe <mailto:jane.doe@example.com>`, only `Jane Doe <mailto:jane.doe@example.com>` will be inserted into the buffer. This way you
-can search by alias (`mom`), even if the alias does not contain words in the
-name (`Jane Doe`) or email address (`jane.doe@example.com`) of the person.
+completion menu, but not inserted into the buffer. If the menu shows `mom: Jane
+Doe <jane.doe@example.com>`, only `Jane Doe <jane.doe@example.com>` will be
+inserted into the buffer. This way you can search by alias (`mom`), even if the
+alias does not contain words in the name (`Jane Doe`) or email address
+(`jane.doe@example.com`) of the person.
 
 Because of the custom matching behavior, I do not recommend overriding the
 matcher for this source.
