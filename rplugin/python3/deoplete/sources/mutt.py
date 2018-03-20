@@ -4,7 +4,8 @@ import glob
 from .base import Base
 
 
-POSSIBLE_MUTT_DIRS = ('$XDG_CONFIG_HOME/mutt', '~/.mutt')
+POSSIBLE_MUTT_DIRS = ('$XDG_CONFIG_HOME/mutt', '~/.mutt',
+                      '$XDG_CONFIG_HOME/neomutt', '~/.neomutt')
 
 
 def expand(p):
