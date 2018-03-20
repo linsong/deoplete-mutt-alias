@@ -8,7 +8,7 @@ Mutt alias completion source for
 ## Configuration
 
 There is none. This source searches all files in `$XDG_CONFIG_HOME/mutt/` and
-`~.mutt/` and collects aliases from _all_ of them.
+`~/.mutt/` and collects aliases from _all_ of them.
 
 ## Matching
 
