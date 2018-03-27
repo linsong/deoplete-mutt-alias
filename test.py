@@ -9,11 +9,13 @@ class DummyBaseClass:
     def __init__(self, vim):
         self.vim = vim
         self.Base = type(self)
+        self.expand = lambda x: path.expanduser(path.expandvars(x))
 
 
 patches = {
     'rplugin.python3.deoplete.filter.base': DummyBaseClass(None),
     'rplugin.python3.deoplete.sources.base': DummyBaseClass(None),
+    'deoplete.util': DummyBaseClass(None),
 }
 
 with mock.patch.dict('sys.modules', patches):

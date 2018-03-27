@@ -2,14 +2,11 @@ from os import path
 import glob
 
 from .base import Base
+from deoplete.util import expand
 
 
 POSSIBLE_MUTT_DIRS = ('$XDG_CONFIG_HOME/mutt', '~/.mutt',
                       '$XDG_CONFIG_HOME/neomutt', '~/.neomutt')
-
-
-def expand(p):
-    return path.expanduser(path.expandvars(p))
 
 
 class Source(Base):
