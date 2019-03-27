@@ -64,6 +64,8 @@ class Source(Base):
 
         for dir in self._find_mutt_dirs():
             for file in glob.glob(expand(dir + '/*')):
+                if path.isdir(file):
+                    continue
                 with open(file) as f:
                     if any(line.lstrip().startswith('alias') for line in f):
                         self._alias_files.add(file)
