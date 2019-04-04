@@ -63,7 +63,7 @@ class Source(Base):
         self._alias_files = set()
 
         for dir in self._find_mutt_dirs():
-            for file in glob.glob(expand(dir + '/*')):
+            for file in glob.glob(expand(dir + '/aliases')):
                 if path.isdir(file):
                     continue
                 with open(file) as f:
